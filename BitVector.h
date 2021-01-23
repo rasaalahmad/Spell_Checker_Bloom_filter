@@ -41,6 +41,11 @@ public:
         int x = bytes[byten] & mask;
         return (x != 0);
     }
+    
+    ~BitVector()
+    {
+        delete[]bytes;
+    }
 
 };
 
